@@ -43,13 +43,13 @@ vapp = new Vue({
     // --------------------------------------------------------------------------
 
     showBack: true,
-    showArmor2: false,
-    showHead2: false,
+    showArmor2: true,
+    showHead2: true,
     showArmor3: true,
     showHead3: true,
     showFirstAid: true,
     showMedKit: true,
-    showDrink: false,
+    showDrink: true,
     showGrenade: true,
     showSmokeBomb: false,
     showAmmo556: false,
@@ -65,7 +65,7 @@ vapp = new Vue({
     showSRSuppressor: true,
     showSRExtended: false,
     showSRStock: false,
-    showM16A4: true,
+    showM16A4: false,
     showSCAR: true,
     showAK47: false,
     showHK416: true,
@@ -243,7 +243,7 @@ function getMapSource (mapType) {
     ? 'erangel/v11'
     : 'miramar/v5'
   // if false, will use https://tiles2-v2.pubgmap.net/tiles/erangel/v11/{z}/{x}/{y}.png not sure if it is stable or not. But it will have more zoom, up to 5. Local only has up to 4
-  let useLocalResource = false
+  let useLocalResource = true
   const mapBase = useLocalResource
     ? '../maptiles'
     : 'https://tiles2-v2.pubgmap.net/tiles'
@@ -676,7 +676,21 @@ const renderMap = () => {
          [loc[0] + Math.cos(radianAngle) * 512, loc[1] - Math.sin(radianAngle) * 512]]
         )
       )
-    } 
+    } else { // enemy
+      if (playerObj.team) {
+        label = `${playerObj.team}`
+      } else if (playerObj.name) {
+        label = playerObj.name
+      } else {
+        label = `<${playerObj.name}>`
+      }
+      if (playerObj.kills) {
+        label += ` |杀:${playerObj.kills}|`
+      }
+    }
+    if (playerObj.health != null) {
+      label += ` |血:${Math.floor(playerObj.health)}|`
+    }
     feature.set('_label', label)
     // re-add should be fine
     playerSource.addFeature(feature)
