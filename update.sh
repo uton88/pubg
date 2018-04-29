@@ -32,11 +32,11 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/794959818/pubg1.git
-cd pubg1/
+git clone https://github.com/vip522681351/pubg.git
+cd pubg/
 npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
-echo "搭建完成"
+ECHO "搭建完成"
