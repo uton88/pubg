@@ -384,7 +384,7 @@ const playerStyleFunc = function (feature) {
     text: new ol.style.Text({
       font: '8px Serif,Monospace',
       textAlign: 'center',
-      fill: new ol.style.Fill({ color: 'rgba(208,32,144,1)' }),
+      fill: new ol.style.Fill({ color: 'rgba(255,255,255,1)' }),
       text: this.get('_label') || '' ,
       offsetY: 15
     })
