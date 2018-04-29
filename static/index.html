@@ -75,7 +75,7 @@
           <input type="checkbox" id="showAmmo762" v-model="showAmmo762"><label for="showAmmo762">7.62</label>
           <br><br>
 
-          <input type="checkbox" id="showForeGrip" v-model="showForeGrip"><label for="showForeGrip">握把　</label>
+          <input type="checkbox" id="showForeGrip" v-model="showForeGrip"><label for="showForeGrip">关闭所有物品显示</label>
           <input type="checkbox" id="showLowST" v-model="showLowST"><label for="showLowST">基础镜</label>
           <input type="checkbox" id="showHighST" v-model="showHighST"><label for="showHighST">高倍镜</label>
           <br>
@@ -104,11 +104,11 @@
           <input type="checkbox" id="showPan" v-model="showPan"><label for="showPan">平底锅</label>
 
         <hr>
-        <label class="label">刷新率:</label>
-          <a class="button is-small" @click="setFPS(5)">fps5</a>
-          <a class="button is-small" @click="setFPS(15)">fps15</a>
-          <a class="button is-small" @click="setFPS(30)">fps30</a>
-          <a class="button is-small" @click="setFPS(60)">fps60</a>
+        <label class="label">刷新速度:</label>
+          <a class="button is-small" @click="setFPS(5)">极慢</a>
+          <a class="button is-small" @click="setFPS(15)">慢</a>
+          <a class="button is-small" @click="setFPS(30)">快</a>
+          <a class="button is-small" @click="setFPS(60)">极快</a>
           <br><br>
 
         <!-- <a class="button is-small" @click="toggleRefresh">{{ toggleButtonText }}</a>
