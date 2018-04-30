@@ -223,7 +223,6 @@ vapp = new Vue({
         this.toggleButtonText = ' Stop Refresh'
       }
     },
-	var fps =60;
     setFPS (fps) {
       appData.refreshInterval = Math.floor(1000 / fps)
     },

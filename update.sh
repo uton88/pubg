@@ -1,8 +1,8 @@
 ﻿#!/bin/bash
 echo "欢迎使用一键搭建"
-echo "即将搭建的是26版本"
-
-echo "此版本仍存在bug"
+echo "即将搭建的是30版本"
+echo "此版本修复载具追随"
+echo "但仍存在bug"
 echo "加Q522681351获取最新动态"
 
 echo "准备开始安装"
@@ -39,4 +39,4 @@ npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
-ECHO "搭建完成"
+ECHO "我们的端口是88哦"
