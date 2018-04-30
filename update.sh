@@ -38,4 +38,4 @@ npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
-ECHO "公网ip就是雷达网址哦"
+echo "公网ip就是雷达网址哦"
