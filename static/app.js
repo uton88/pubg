@@ -223,8 +223,9 @@ vapp = new Vue({
         this.toggleButtonText = ' Stop Refresh'
       }
     },
+	var fps =60;
     setFPS (fps) {
-      appData.refreshInterval = Math.floor(60 / fps)
+      appData.refreshInterval = Math.floor(1000 / fps)
     },
     showNoItems () {
       this.showItemAll = this.showItemDuoDuo = this.showItemTop = this.showItemBasic = this.showItemAR = this.showItemSR = this.showItemHealth = this.showItemThrow = this.showItemAmmo = this.showItemAll = false
@@ -382,7 +383,7 @@ const playerStyleFunc = function (feature) {
       rotation: this.get('_rotation') || 0, // 0 - 6.28,
     }),
     text: new ol.style.Text({
-      font: '8px Serif,Monospace',
+      font: '12px Serif,Monospace',
       textAlign: 'center',
       fill: new ol.style.Fill({ color: 'rgba(255,255,255,1)' }),
       text: this.get('_label') || '' ,
