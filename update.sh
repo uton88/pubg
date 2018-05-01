@@ -38,4 +38,4 @@ npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
-echo "公网ip就是雷达网址哦"
+echo "端口已经修改为88"
